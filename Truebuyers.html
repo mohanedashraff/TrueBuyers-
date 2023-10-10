@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('https://i.ibb.co/FH4Fz40/Untitled-1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #1e558e;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+     
+        }
+        .form-container input[type="text"],
+        .form-container input[type="number"],
+        .form-container input[type="tel"],
+        .form-container select,
+        .form-container textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .form-container input[type="checkbox"] {
+            margin-top: 5px;
+        }
+        .form-container button {
+            background-color: #179c4b;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <img class="logo" src="https://i.ibb.co/qYQkcMt/222.png" alt="Logo">
+        <form id="propertyForm">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="number">Phone Number:</label>
+            <input type="tel" id="number" name="number" required><br>
+
+            <label for="adress">Adress:</label>
+            <input type="text" id="adress" name="adress" required><br>
+
+            <label for="bedrooms">Number of Bedrooms:</label>
+            <input type="number" id="bedrooms" name="bedrooms" required><br>
+
+            <label for="bathrooms">Number of Bathrooms:</label>
+            <input type="number" id="bathrooms" name="bathrooms" required><br>
+
+            <label for="garage">Garage or Additional Storage Space:</label>
+            <input type="text" id="garage" name="garage"><br>
+
+            <label for="renovations">Recent Renovations or Upgrades:</label>
+            <textarea id="renovations" name="renovations"></textarea><br>
+
+            <label for="damage">Damage that Needs Repair:</label>
+            <textarea id="damage" name="damage"></textarea><br>
+
+            <label for="selling_reason">Reason for Selling:</label>
+            <textarea id="selling_reason" name="selling_reason"></textarea><br>
+
+            <label for="mortgages">Existing Mortgages or Liens:</label>
+            <textarea id="mortgages" name="mortgages"></textarea><br>
+
+
+
+            <label for="asking_price">Asking Price:</label>
+            <input type="number" id="asking_price" name="asking_price"><br>
+
+            <label for="property_rating">Property Rating:</label>
+            <input type="number" id="property_rating" name="property_rating"><br>
+
+            <label for="zestimate">Zestimate:</label>
+            <input type="number" id="zestimate" name="zestimate"><br>
+
+
+
+            <label for="garage_cars">Number of Garage Cars:</label>
+            <input type="number" id="garage_cars" name="garage_cars"><br>
+
+            <label for="lease_type">Lease Type:</label>
+            <select id="lease_type" name="lease_type">
+                <option value="monthly">Monthly</option>
+                <option value="annually">Annually</option>
+                <option value="None">None</option>
+
+            </select><br>
+
+
+            <label for="size">Property Size (in sq. ft.):</label>
+            <input type="number" id="size" name="size"><br>
+
+            <label for="condition">Condition:</label>
+            <input type="text" id="condition" name="condition"><br>
+
+            <label for="occupancy">Occupancy:</label>
+            <input type="text" id="occupancy" name="occupancy"><br>
+
+            <label for="motivation">Motivation:</label>
+            <input type="text" id="motivation" name="motivation"><br>
+
+            <label for="timeframe">Timeframe:</label>
+            <input type="text" id="timeframe" name="timeframe"><br>
+
+            <label for="motivation_level">Motivation Level:</label>
+            <input type="text" id="motivation_level" name="motivation_level"><br>
+
+            <label for="zillow_link">Zillow Link:</label>
+            <input type="text" id="zillow_link" name="zillow_link"><br>
+
+            <label for="redfin_value">Redfin Value:</label>
+            <input type="text" id="redfin_value" name="redfin_value"><br>
+
+            <label for="redfin_link">Redfin Link:</label>
+            <input type="text" id="redfin_link" name="redfin_link"><br>
+
+            <label for="caller">Caller:</label>
+            <input type="text" id="caller" name="caller"><br>
+
+            <label for="webhook">Discord Webhook Link:</label>
+            <input type="text" id="webhook" name="webhook"><br>
+
+            <label for="lease_expire">Lease Expiry Date:</label>
+            <input type="date" id="lease_expire" name="lease_expire"><br>
+
+            <label for="call_back_time">Best Time To Call Back:</label>
+            <input type="time" id="call_back_time" name="call_back_time"><br>
+
+            <label for="is_rented">Is the Property Rented?</label>
+            <input type="checkbox" id="is_rented" name="is_rented"><br>
+
+            <label for="is_listed">Is the Property Listed?</label>
+            <input type="checkbox" id="is_listed" name="is_listed"><br>
+
+            <button type="button" id="generateButton">Generate Detailed Message</button>
+        </form>
+
+        <div id="output"></div>
+    </div>
+</body>
+</html>
